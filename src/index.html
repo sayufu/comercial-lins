@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comercial Lin's</title>
+  <meta name="author" content="Comercial Lin's" />
+  <meta name="description" content="Somos los principales distribuidores de la marca alemana Stihl en Iquitos, Perú. Venta de motosierras, motoguadañas, motofumigadoras, sopladores, aspiradoras, repuestos y accesorios Stihl originales."/>
+  <meta name="keywords" content="comercial lin's iquitos peru, stihl peru, stihl iquitos, maquinaria, motosierra, motoguadañas, motobombas, aspiradoras, sopladoras, repuestos stihl, accesorios stihl, stihl amazonia, comprar stihl, productos stihl, marca alemana motosierras, desbrozadoras, sopladoras, hidrolavadoras, fumigadoras">
+  <link rel="icon" type="image/x-icon" href="./assets/stihl-logo-icon.png">
+  <link rel="stylesheet" href="styles/tailwind.min.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+    <nav class="sticky container mx-auto">
+        <div class="flex px-6 py-4 place-content-between">
+          <img src="./assets/lins-logo.png" alt="Lins logo" class="h-14 md:h-20 w-´full hover:scale-95 duration-200" />
+          <div class="hidden md:flex gap-6 items-center">
+            <a class="font-medium text-xl hover:text-secondary hover:scale-95 hover:cursor-pointer duration-200" id="about-link">Nosotros</a>
+            <a class="font-medium text-xl hover:text-secondary hover:scale-95 hover:cursor-pointer duration-200" id="product-link">Productos</a>
+            <a class="font-medium text-xl hover:text-secondary hover:scale-95 hover:cursor-pointer duration-200" id="service-link">Servicio Técnico</a>
+            <a class="font-medium text-xl hover:text-secondary hover:scale-95 hover:cursor-pointer duration-200" id="location-link">Ubícanos</a>
+          </div>
+          <div class="md:hidden flex items-center">
+            <ion-icon class="text-5xl" onclick="onToggleMenu(this)" name="menu" id="menu-icon"></ion-icon>
+          </div>
+        </div>
+        <div id="responsive-navbar" class="hidden justify-center items-center text-center">
+          <div class="grid gap-6 w-full py-4 font-medium text-xl">
+            <a class="font-medium text-xl" onclick="closeToggleMenu(this)" id="about-link" href="#about">Nosotros</a>
+            <a class="font-medium text-xl" onclick="closeToggleMenu(this)" id="product-link" href="#product">Productos</a>
+            <a class="font-medium text-xl" onclick="closeToggleMenu(this)" id="service-link" href="#service">Servicio Técnico</a>
+            <a class="font-medium text-xl" onclick="closeToggleMenu(this)" id="location-link" href="#location">Ubícanos</a>
+          </div>
+        </div>
+    </nav>
+    <main class="grid md:gap-24 gap-12">
+        <section id="hero">
+            <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                <div class="relative h-56 overflow-hidden md:h-[780px]">
+                  <!-- Item 1 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./assets/hero-sliders/slider-1.webp"
+                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                         alt="Comercial Lins Slider">
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./assets/hero-sliders/slider-2.webp"
+                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                         alt="Comercial Lins Slider">
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./assets/hero-sliders/slider-3.webp"
+                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                         alt="Comercial Lins Slider">
+                  </div>
+                  <!-- Item 4 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./assets/hero-sliders/slider-4.webp"
+                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                         alt="Comercial Lins Slider">
+                  </div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+                  <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                  <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                  <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                  <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+              </div>
+        </section>
+        <section id="about">
+            <div class="container mx-auto py-6 px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="grid gap-6">
+                  <h1 class="text-secondary font-bold text-3xl">SOBRE NOSOTROS</h1>
+                  <p class="text-xl text-justify">
+                    Con más de 10 años de experiencia, somos los principales distribuidores autorizados de Stihl en Iquitos, Perú.
+                    Nuestra compromiso es ofrecer productos 100% alemanes de la más alta calidad y un servicio al cliente destacado para el mercado peruano.
+                  </p>
+                  <div class="flex justify-center md:justify-start">
+                    <a id="location-link-button" class="button-fill">
+                      Ubicar tienda
+                    </a>
+                  </div>
+                </div>
+                <img src="./assets/shops-lins.png"
+                     class="w-full h-48 md:h-96 object-cover object-center" alt="Shop photo"/>
+              </div>
+        </section>
+        <section id="product">
+            <div class="flex flex-col gap-8 px-12 text-center items-center">
+                <div class="grid gap-2">
+                  <h1 class="text-secondary font-bold text-5xl">PRODUCTOS</h1>
+                  <p class="text-xl">Para uso profesional y doméstico</p>
+                </div>
+                <button class="button-fill w-fit">Descargar catálogo</button>
+                <div class="grid grid-cols-2 md:flex justify-between text-center gap-6">
+                  <div class="flex flex-col items-center hover:scale-95 duration-200">
+                    <img src="./assets/products/motosierra.png" alt="Motosierras" class="" />
+                    <h2 class="text-xl font-bold">Motosierras</h2>
+                  </div>
+                  <div class="flex flex-col items-center hover:scale-95 duration-200">
+                    <img src="./assets/products/motoguadana.png" alt="Motoguadañas" class="" />
+                    <h2 class="text-xl font-bold">Motoguadañas</h2>
+                  </div>
+                  <div class="flex flex-col items-center hover:scale-95 duration-200">
+                    <img src="./assets/products/motofumigadora.png" alt="Motofumigadoras" class="" />
+                    <h2 class="text-xl font-bold">Motofumigadoras</h2>
+                  </div>
+                  <div class="flex flex-col items-center hover:scale-95 duration-200">
+                    <img src="./assets/products/soplador.png" alt="Sopladores" class="" />
+                    <h2 class="text-xl font-bold">Sopladores</h2>
+                  </div>
+                  <div class="flex flex-col items-center hover:scale-95 duration-200">
+                    <img src="./assets/products/aspiradora.png" alt="Aspiradoras" class="" />
+                    <h2 class="text-xl font-bold">Aspiradoras</h2>
+                  </div>
+                  <div class="flex flex-col items-center hover:scale-95 duration-200">
+                    <img src="./assets/products/repuestos.png" alt="Repuestos y accesorios" class="" />
+                    <h2 class="text-xl font-bold">Repuestos y accesorios</h2>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <section id="service">
+            <div class="container mx-auto py-6 px-6 grid md:grid-cols-2 gap-12 items-center">
+                <img src="./assets/estante-lins.png"
+                     class="w-full h-48 md:h-96 object-cover object-center" alt="Shop photo"/>
+                <div class="grid gap-6 text-center md:text-justify">
+                  <h1 class="text-secondary font-bold text-3xl">SERVICIO TÉCNICO</h1>
+                  <p class="text-xl">
+                    Contamos con taller y técnico especializado para asesoría, mantenimiento y reparación de maquinaria Stihl.
+                    Acércate a nuestra tienda en Iquitos para consultar por este servicio.
+                  </p>
+                </div>
+              </div>
+        </section>
+        <section id="benefit">
+            <div class="bg-secondary">
+                <div class="container mx-auto grid md:flex justify-around py-12 gap-12">
+                  <div class="flex flex-col items-center px-12 gap-4">
+                    <svg class="h-16 md:h-32"
+                         viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M182.87 146.29h585.14v292.57h73.14V73.14H109.72v877.72h402.29v-73.15H182.87z" fill="#FFFFFF"></path><path d="M713.14 481.52L512 582.1v88.24c0 110.29 62.31 211.11 160.95 260.43l40.19 20.09 40.19-20.09c98.64-49.32 160.95-150.14 160.95-260.43V582.1L713.14 481.52z m128 188.81c0 83.12-46.18 157.84-120.52 195.01l-7.48 3.74-7.48-3.74c-74.34-37.17-120.52-111.9-120.52-195.01V627.3l128-64 128 64v43.03z" fill="#FFFFFF"></path><path d="M657.87 683.21l-36.33 41.11 93.25 82.43 113.93-131.09-41.39-36L709.69 729zM256 256h438.86v73.14H256zM256 438.86h292.57V512H256zM256 621.71h146.29v73.14H256z" fill="#FFFFFF"></path></g></svg>
+                    <p class="font-medium text-white text-2xl text-center">Somos distribuidores autorizados de productos Stihl 100% calidad alemana</p>
+                  </div>
+                  <div class="flex flex-col items-center px-12 gap-4">
+                    <svg class="h-16 md:h-32"
+                         fill="#FFFFFF" viewBox="0 0 52 52" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M26,2c3,0,5.43,3.29,8.09,4.42s6.82.51,8.84,2.65,1.51,6.07,2.65,8.84S50,23,50,26s-3.29,5.43-4.42,8.09-.51,6.82-2.65,8.84-6.07,1.53-8.84,2.65S29,50,26,50s-5.43-3.29-8.09-4.42-6.82-.51-8.84-2.65-1.53-6.07-2.65-8.84S2,29,2,26s3.29-5.43,4.42-8.09.51-6.82,2.65-8.84,6.07-1.53,8.84-2.65S23,2,26,2Zm0,7.58A16.42,16.42,0,1,0,42.42,26h0A16.47,16.47,0,0,0,26,9.58Zm7.62,9.15,1.61,1.52a1.25,1.25,0,0,1,0,1.51L25.08,33.07a2.07,2.07,0,0,1-1.61.7,2.23,2.23,0,0,1-1.61-.7L16.37,27.6a1,1,0,0,1-.1-1.42l.1-.11L18,24.56a1.1,1.1,0,0,1,1.54-.07l.07.07,3.89,4,8.59-9.8A1.1,1.1,0,0,1,33.62,18.73Z"></path></g></svg>
+                    <p class="font-medium text-white text-2xl text-center">Las maquinarias Stihl cuentan con garantía de 1 año desde su compra.</p>
+                  </div>
+                  <div class="flex flex-col items-center px-12 gap-4">
+                    <svg class="h-16 md:h-32"
+                         id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#FFFFFF"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g> <path class="st0" d="M360.102,240.012l10.156-10.266c0,0,15.609-13.406,33.406-7.328c30.984,10.578,66.781-0.875,91.609-25.734 c7.063-7.063,15.641-21.234,15.641-21.234c0.984-1.344,1.328-3.047,0.922-4.672l-1.922-7.906c-0.359-1.484-1.313-2.75-2.625-3.531 c-1.313-0.766-2.891-0.969-4.344-0.547l-60.984,16.969c-2.266,0.625-4.688-0.219-6.063-2.109l-28.015-38.594 c-0.859-1.172-1.219-2.641-1.016-4.063l5.641-41c0.297-2.234,1.891-4.047,4.063-4.656l64.406-17.922 c2.906-0.813,4.672-3.813,3.953-6.766l-2.547-10.359c-0.344-1.469-1.281-2.719-2.563-3.5c0,0-5.047-3.344-8.719-5.234 c-36.578-18.891-82.64-13.031-113.312,17.656c-22.656,22.656-31.531,53.688-27.375,83.156c3.203,22.656,1.703,34.703-8.078,45.047 c-0.891,0.922-3.703,3.734-8.047,8L360.102,240.012z"></path> <path class="st0" d="M211.383,295.418C143.024,361.652,68.461,433.715,68.461,433.715c-2.547,2.438-4,5.797-4.047,9.313 c-0.047,3.5,1.344,6.891,3.813,9.375l31.938,31.938c2.5,2.484,5.875,3.859,9.391,3.813c3.516-0.031,6.859-1.5,9.281-4.031 l139.328-140.953L211.383,295.418z"></path> <path class="st0" d="M501.43,451.371c2.484-2.484,3.859-5.859,3.813-9.375c-0.031-3.516-1.5-6.859-4.031-9.297L227.415,166.246 l-43.953,43.969L450.805,483.09c2.438,2.547,5.781,4,9.297,4.047s6.891-1.344,9.391-3.828L501.43,451.371z"></path> <path class="st0" d="M254.196,32.621c-32.969-12.859-86.281-14.719-117.156,16.141c-24.313,24.313-59.875,59.891-59.875,59.891 c-12.672,12.656-0.906,25.219-10.266,34.563c-9.359,9.359-24.313,0-32.734,8.422L3.29,182.527c-4.391,4.375-4.391,11.5,0,15.891 l43.016,43.016c4.391,4.391,11.516,4.391,15.906,0l30.875-30.875c8.438-8.422-0.938-23.375,8.438-32.719 c12.609-12.625,26.375-10.484,34.328-2.547l15.891,15.891l17.219,4.531l43.953-43.953l-5.063-16.688 c-14.016-14.031-16.016-30.266-7.234-39.047c13.594-13.594,36.047-33.234,57.078-41.656 C271.102,49.012,267.055,35.668,254.196,32.621z M194.571,103.48c-0.063,0.047,5.859-7.281,5.969-7.375L194.571,103.48z"></path> </g> </g></svg>
+                    <p class="font-medium text-white text-2xl text-center">Contamos con servicio técnico especializado y todos los repuestos</p>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <section id="location">
+            <div class="container mx-auto py-6 px-6 grid md:flex gap-12 items-center">
+                <div class="grid gap-6 md:w-1/3 text-center md:text-justify">
+                  <h1 class="text-secondary font-bold text-3xl">Comercial Lin’s Iquitos</h1>
+                  <div class="text-xl">
+                    <p class="font-medium">Calle Requena 273, Iquitos, Loreto</p>
+                    <p>+51 992969707</p>
+                    <p>lins19388@gmail.com</p>
+                    <br>
+                    <p class="font-bold">Horarios de atención</p>
+                    <p class="font-medium">Lunes - Sábado</p>
+                    <p>de 8:00 am a 1:00 pm</p>
+                    <p>de 3:00 pm a 6:00 pm</p>
+                  </div>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.3087397653594!2d-73.24386112617346!3d-3.742763343242981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ea116844d15495%3A0xf93f1350ab20ad2f!2sComercial%20LINS%20E.I.R.L!5e0!3m2!1ses!2spe!4v1690921264356!5m2!1ses!2spe"
+                        class="w-full h-96 object-cover object-center md:w-2/3"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+        </section>
+        <section id="foooter">
+            <div class="bg-primary py-16 px-8">
+                <div class="container mx-auto">
+                  <div class="grid md:flex justify-between text-white gap-4 items-center">
+                    <img src="./assets/lins-logo-white.png" alt="Lins logo" class="h-16 md:h-20 w-auto hover:scale-95 duration-200" />
+                    <div class="grid md:flex gap-4 md:gap-12 text-center md:text-left">
+                      <div class="text-xl">
+                        <p class="font-medium">Calle Requena 273, Iquitos, Loreto</p>
+                        <p>+51 992969707</p>
+                        <p>lins19388@gmail.com</p>
+                      </div>
+                      <div class="text-xl">
+                        <p class="font-medium">Lunes - Sábado</p>
+                        <p>de 8:00 am a 1:00 pm</p>
+                        <p>de 3:00 pm a 6:00 pm</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+    <script src="./scripts/navbar.js" defer></script>
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

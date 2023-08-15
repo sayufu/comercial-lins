@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+      font-family: Roboto, system-ui, sans-serif;
+    }
+}
+
+@layer components {
+  .button-fill{
+      @apply bg-secondary text-white font-bold py-3 px-8 rounded-full;
+      @apply hover:scale-95 hover:cursor-pointer duration-200;
+  }
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #ff6e75 white;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #EE7101;
+  border-radius: 10px;
+}
