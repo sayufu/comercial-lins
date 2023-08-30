@@ -1027,7 +1027,6 @@ html {
 }
 
 .button-fill {
-  border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(238 113 1 / var(--tw-bg-opacity));
   padding-top: 0.75rem;
@@ -1045,6 +1044,8 @@ html {
   --tw-scale-y: .95;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   cursor: pointer;
+  --tw-bg-opacity: 1;
+  background-color: rgb(68 75 81 / var(--tw-bg-opacity));
 }
 
 .sr-only {
@@ -1252,6 +1253,10 @@ html {
   width: 2.5rem;
 }
 
+.w-12 {
+  width: 3rem;
+}
+
 .w-3 {
   width: 0.75rem;
 }
@@ -1275,10 +1280,6 @@ html {
 
 .w-full {
   width: 100%;
-}
-
-.w-12 {
-  width: 3rem;
 }
 
 .flex-1 {
@@ -2072,10 +2073,6 @@ html {
 
   .md\:gap-24 {
     gap: 6rem;
-  }
-
-  .md\:gap-6 {
-    gap: 1.5rem;
   }
 
   .md\:gap-4 {
